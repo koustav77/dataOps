@@ -1,0 +1,16 @@
+PS C:\WORKING> dir
+
+
+    Directory: C:\WORKING
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          7/5/2024   2:51 PM             14 FileA.txt
+-a----          7/5/2024   2:51 PM             14 FileB.txt
+
+
+PS C:\WORKING> git init
+Initialized empty Git repository in C:/WORKING/.git/
+PS C:\WORKING> git config --global user.name "Koustav Biswas"
+PS C:\WORKING> git config --global user.email "koustavbiswas.kb@gmail.com"
