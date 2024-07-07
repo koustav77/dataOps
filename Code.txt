@@ -1,0 +1,104 @@
+PS C:\WORKING> dir
+
+
+    Directory: C:\WORKING
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          7/5/2024   2:51 PM             14 FileA.txt
+-a----          7/5/2024   2:51 PM             14 FileB.txt
+
+
+PS C:\WORKING> git init
+Initialized empty Git repository in C:/WORKING/.git/
+PS C:\WORKING> git config --global user.name "Koustav Biswas"
+PS C:\WORKING> git config --global user.email "koustavbiswas.kb@gmail.com"
+PS C:\WORKING> git add .
+PS C:\WORKING> git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Code.txt
+        new file:   FileA.txt
+        new file:   FileB.txt
+
+PS C:\WORKING> git commit -m  "This is the initial commit"
+[main (root-commit) 7ed8baa] This is the initial commit
+ 3 files changed, 18 insertions(+)
+ create mode 100644 Code.txt
+ create mode 100644 FileA.txt
+ create mode 100644 FileB.txt
+PS C:\WORKING> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\WORKING> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   FileA.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\WORKING> git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config advice.addEmptyPathspec false"
+PS C:\WORKING> git add FileA.txt  
+PS C:\WORKING> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   FileA.txt
+
+PS C:\WORKING> git commit -m  "This is the change in file A"       
+[main ad1a1c5] This is the change in file A
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+PS C:\WORKING> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\WORKING> git status
+On branch main
+nothing to commit, working tree clean
+
+PS C:\WORKING> git add .
+PS C:\WORKING> git status
+HEAD detached at 8965dc8
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   FileA.txt
+
+PS C:\WORKING> git checkout main
+M       FileA.txt
+Switched to branch 'main'
+PS C:\WORKING> git rm --cached FileA.txt
+rm 'FileA.txt'
+PS C:\WORKING> git status               
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    FileA.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        FileA.txt
+
+PS C:\WORKING> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    FileA.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        FileA.txt
+
+PS C:\WORKING> git add . 
+PS C:\WORKING> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\WORKING>
+
